@@ -1,10 +1,11 @@
-FROM php:8.2-apache
+# Usa a imagem oficial PHP 8.3 FPM (sem Apache)
+FROM php:8.3-fpm
 
-# Copia arquivos para diretório padrão do apache
+# Instala extensões PHP necessárias
+RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+
+# Copia o código da aplicação
 COPY . /var/www/html/
 
-# Habilita mod_rewrite (se usar .htaccess)
-RUN a2enmod rewrite
-
-# Expõe a porta 80
-EXPOSE 80
+# Ajusta permissões
+RUN chown -R www-data:www-data /var/www/html
