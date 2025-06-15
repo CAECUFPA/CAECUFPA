@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  min-height: 100vh;
+  font-family: 'Times New Roman', serif;
+  font-size: 1rem;
+  background: #102347;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 18px;
+  padding: 12px;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 1em;
+  color: #f2c94c;
+  white-space: nowrap;
+  filter: brightness(1.1);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  background: rgba(16, 35, 71, 0.82);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 95vw;
+  margin: calc(30px + 100px) auto 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+}
+
+#resultado,
+#saldo-atual {
+  background: #183157;
+  border: 2px solid #f2c94c;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8em;
+  padding: 8px 20px;
+  margin-top: 10px;
+  width: 500px;
+}
+
+#saldo-atual {
+  display: block;
+  margin: 20px auto 0;
+  min-width: 220px;
+  text-align: center;
+}
+
+#saldo {
+  color: #f2c94c;
+}
+
+#entradas {
+  color: #4caf50;
+}
+
+#saidas {
+  color: #f44336;
+}
+
+.emoji {
+  vertical-align: middle;
+  width: 60px;
+  max-width: 30vw;
+  height: auto;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.coruja {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 200px;
+  max-width: 90vw;
+  width: auto;
+  pointer-events: none;
+  filter: brightness(1.4);
+  z-index: 1;
+}
+
+@media (min-width: 601px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  .container {
+    padding: 30px;
+  }
+  #resultado,
+  #saldo-atual {
+    font-size: 1.8em;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .coruja {
+    height: 120px;
+  }
+}
