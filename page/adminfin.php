@@ -5,7 +5,7 @@
 
 <div class="container">
   <h1>
-    <img src="assets/logo,semfundo.png" alt="emoji" class="emoji" />
+    <img src="i/logo,semfundo.png" alt="emoji" class="emoji" />
     Caixa Caec:
   </h1>
 
