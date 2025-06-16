@@ -1,0 +1,12 @@
+# render.yaml
+type: web_service
+name: meu-php-site
+env: docker
+serviceAccount: default
+
+environment:
+  PORT: 80
+
+autobuild: true
+
+
